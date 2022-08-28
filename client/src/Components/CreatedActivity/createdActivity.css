@@ -1,0 +1,58 @@
+.form-contain {
+    background-attachment: fixed;
+    background-image: url('../Image/carpamontaña.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    overflow-y: hidden;
+    min-height: 100vh;
+} 
+
+.btn-volver{
+position: relative;
+text-align: center;
+top: 580px;
+}
+
+.formulario{
+color: white;
+position: relative;
+text-align: center;
+ top: 120px;
+ 
+}
+
+body{
+text-align: center;
+}
+
+.crear-titulo{
+    display: inline-block;
+    position: relative;
+    color:brown;
+}
+
+.crear-titulo::after,.crear-titulo::before{
+content: '';
+position: absolute;
+width: 120px;
+height: 3px;
+background-color: brown;
+top:0.6em;
+}
+
+.crear-titulo::before{
+left:-140px;
+}
+
+.crear-titulo::after{
+right: -140px;
+}
+
+.crear-sugerencia{
+    text-align: center;
+    font-size: 17px;
+    position: relative;
+    color:brown;
+    top: -15px;
+}

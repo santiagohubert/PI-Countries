@@ -1,0 +1,11 @@
+.letra-paises{
+    color: brown;
+}
+
+.image-size {
+    height: auto;
+    max-height: 120px;
+    box-sizing: border-box;
+    width: auto;
+    object-fit: cover;
+}

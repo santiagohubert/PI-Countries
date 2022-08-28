@@ -1,0 +1,67 @@
+.landing-contain {
+    background-attachment: fixed;
+    background-image: url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/01/17155044/Avion-despegando.jpg');
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; /*https://38.media.tumblr.com/dff2645c0b11fda6a1b6f7d5f65e4cc4/tumblr_n862y5eEn11qlukpso1_1280.gif*/
+    position: relative;
+    overflow-y: hidden;
+    min-height: 100vh;
+}
+
+ .titulo-landing{
+    font-size: 20px; /*tamaño*/
+    font-family:initial;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+    left: 0px;
+    color: rgb(34, 35, 148);
+}  
+
+.subtitulo-landing{
+    font-size: 11px; /*tamaño*/
+    font-family:initial;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 405px;
+    left: 0px;
+    color: rgb(41, 37, 35);
+}
+
+
+
+.containerbtn{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative; 
+    right: 0px;
+    top: 280px; 
+    text-decoration: none;
+}
+
+.btn1{
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    border: 2px solid #d89024;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(to right, #d89024 50%, transparent 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.5s;
+    top: 368px;
+    left: 2px;
+    text-decoration: none;
+}
+
+.btn1:hover{
+background-position: left;
+color: black;
+font-weight: 700;
+text-decoration: none;
+}
