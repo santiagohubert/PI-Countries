@@ -54,10 +54,11 @@ function rootReducer(state= initialState, action) {
                     ...state,
                     countries: action.payload
                 }
-            case 'POST_ACTIVITY':
-                return {
-                    ...state,
-                }
+            // case 'POST_ACTIVITY':
+            //     return {
+            //         ...state,
+            //         countries: action.payload
+            //     }
             case 'GET_ACTIVITIES':
                 return {
                     ...state,
@@ -91,6 +92,11 @@ function rootReducer(state= initialState, action) {
             return {
                 ...state,
                 details: action.payload
+            }
+        case 'CLEAN_DETAILS':
+            return {
+                ...state,
+                details:[]
             }
             
             default: return state;

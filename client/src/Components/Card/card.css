@@ -1,11 +1,17 @@
 .letra-paises{
-    color: brown;
+    color: #d89024;
+    padding: 15px;
+    box-shadow: 0 3px 12px rgba(255, 255, 253, 0.663);
+}
+
+.letra-paises h1, .letra-paises h2{
+    text-shadow: 2px 2px black;
 }
 
 .image-size {
-    height: auto;
+    height: 150px;
     max-height: 120px;
     box-sizing: border-box;
-    width: auto;
+    width: 200px;
     object-fit: cover;
 }

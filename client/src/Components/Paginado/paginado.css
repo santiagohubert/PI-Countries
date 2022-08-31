@@ -1,0 +1,7 @@
+.button-prev, .button-next {
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.detail-found{
+    background-image: url('../Image/detailmapa.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    position: relative;
+    overflow-y: hidden;
+    min-height: 100vh;
+    
+}
+
+.letras-detail{
+    /* height: 1000px; */
+    background-color: rgb(231, 218, 218, 0.3);
+    font: optional;
+    color:rgb(201, 2, 2);
+}

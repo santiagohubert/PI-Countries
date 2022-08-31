@@ -40,14 +40,20 @@ export function getNameCountries(name){
 }
 }
 
+// export function postActivity(payload){
+//     return async function (dispatch) {
+//         const response = await axios.post('http://localhost:3001/activities', payload)
+//         console.log(response)
+//         return {
+//             type: 'POST_ACTIVITY',
+//             response
+//         }
+//     }
+// }
 export function postActivity(payload){
-    return async function (dispatch) {
-        const response = await axios.post('http://localhost:3001/activity', payload)
-        console.log(response)
-        return {
-            type: 'POST_ACTIVITY',
-            response
-        }
+    return async function(){
+        const response = await axios.post('http://localhost:3001/activities', payload)
+     return response   
     }
 }
 
@@ -79,6 +85,12 @@ export function getCountryDetails(id){
     } catch (error) {
         console.log(error)
         }
+    }
+}
+
+export function cleanDetails(){
+    return {
+        type: 'CLEAN_DETAILS',
     }
 }
 

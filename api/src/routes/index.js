@@ -10,7 +10,7 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 router.get('/countries', getCountryName);
 
-router.get('/country/:id', getCountryId);
+router.get('/countries/:id', getCountryId);
 
 router.post('/activities', postActivities);
 

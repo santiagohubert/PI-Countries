@@ -20,13 +20,12 @@
 }
 
 .centradoPage {
-display: flex;
-flex-direction: column;
-align-items: center;
-position: relative;
-top: 15px;
-left: 30px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 15px;
+    left: 30px;
 }
 
 .form{
@@ -38,4 +37,64 @@ left: 30px;
     top: 40px;
     left: 470px;
     color: #d89024;
+}
+
+.estilo-cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: grid;
+    gap:2rem;
+    align-items: center; 
+    grid-auto-rows:15rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-items: center; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.form-select {
+    backdrop-filter: blur(14px);
+    background-color:#d89024;
+    box-shadow: 0 6px 17px rgba(70, 81, 11, 0.663);
+    border-top: 0;
+    border-left: 0;
+    width: 160px;
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.clean-filters {
+    background-color:#79736a;
+    box-shadow: 0 3px 12px rgba(247, 247, 245, 0.663);
+    color: white;
+    border-top: 0;
+    border-left: 0;
+    width: 160px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.add-activity {
+    background-color:#105519;
+    box-shadow: 0 3px 12px rgba(77, 77, 73, 0.663);
+    color: white;
+    border-top: 0;
+    border-left: 0;
+    width: 160px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 3px;
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+}
+
+.form-select {
+    cursor: pointer;
 }

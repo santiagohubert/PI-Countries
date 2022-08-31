@@ -5,7 +5,7 @@ import { getCountries, filterCountriesByContinent, orderByName, filterByPopulati
 import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado";
-import Cards from "../Cards/Cards";
+//  import Cards from "../Cards/Cards";
 import "./home.css";
 
 export default function Home() {
@@ -65,9 +65,8 @@ export default function Home() {
              <div className="titulo">   
             <h1> ¿A DÓNDE QUERÉS VIAJAR? </h1>
             </div>
-                <button onClick={(e)=> {handleClick(e)}}> Cargar todos los países </button>
           <select onChange={e => {handleSort(e)}}
-            value="alfabetico" className="nav-button" name="existing" defaultValue="existing"
+            value="alfabetico" className="form-select" name="existing" defaultValue="existing"
           >
             <option value="alfabetico" disabled hidden>
               Orden alfabético
@@ -76,7 +75,7 @@ export default function Home() {
             <option value="desc">Z-A</option>
           </select>
           <select onChange={e => {handleSortPop(e)}}
-            value="poblacion" className="nav-button" name="existing" defaultValue="existing"
+            value="poblacion" className="form-select" name="existing" defaultValue="existing"
           >
             <option value="poblacion" disabled hidden>
               Población
@@ -85,7 +84,7 @@ export default function Home() {
             <option value="descpop">Población Descendente</option>
           </select>
           <select onChange={e => handleFilterContinent(e) }
-            value="all" className="nav-button" name="existing" defaultValue="existing">
+            value="all" className="form-select" name="existing" defaultValue="existing">
             <option value="all" disabled hidden> Continentes </option>
             <option value="Africa">África</option>
             <option value="America">América</option>
@@ -94,33 +93,38 @@ export default function Home() {
             <option value="Oceania">Oceania</option>
           </select>
           <select
-            className="nav-button" name="existing" defaultValue="existing"
+            className="form-select" name="existing" defaultValue="existing"
           >
             <option value="">Filtrar por actividad</option>
           </select>
+          <button onClick={(e)=> {handleClick(e)}} className="clean-filters"> Limpiar filtros </button>
           </div>
           <div>
-                <Link to="/form" className="form"> Añadir actividad turística </Link>
-                </div>
+            <Link to="/form" className="add-activity"> Añadir actividad turística </Link>
+          </div>
           <Paginado
+            setCurrentPage ={setCurrentPage}
+            currentPage ={currentPage}
             countriesPerPage={countriesPerPage}
             allCountries={allCountries.length}
             paginado={paginado}
           />
         </div>
-        {  <Cards allCountries ={allCountries}></Cards> }
-
-        {/* {currentCountries?.map((e) => {
+        {/* {  <Cards allCountries ={allCountries}></Cards> } */}
+        <div className="estilo-cards">
+         {currentCountries?.map((e) => {
           return (
             <div key={e.id}>
               <Card
+                id={e.id}
                 name={e.name}
                 continents={e.continents}
                 image={e.flag}
               />
             </div>
           );
-        })} */}
+        })} 
+        </div>
       </div>
     </div>
   );

@@ -4,8 +4,8 @@ require("dotenv").config();
 
 const postActivities = async (req, res) => {
      try { 
-        let { name, difficulty, duration, season, country } = req.body
-         if (name && difficulty && duration && season && country) {
+        let { name, difficulty, duration, season, countries } = req.body
+         if (name && difficulty && duration && season && countries) {
         let newActivity = {
             name,
             difficulty,
@@ -13,8 +13,8 @@ const postActivities = async (req, res) => {
             season
         }
         const activityCreated = await Activity.create(newActivity)
-        let traerPaises = await Country.findOne({
-            where: { name: country }
+        let traerPaises = await Country.findAll({
+            where: { name: countries }
         })
         activityCreated.addCountry(traerPaises)
         return res.status(200).send("¡Actividad creada con éxito!");
