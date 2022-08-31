@@ -30,14 +30,14 @@ export function getNameCountries(name){
     return async function(dispatch) {
         try {
             var json = await axios.get('http://localhost:3001/countries?name=' + name);
-    return ({
-        type: 'GET_NAME_COUNTRIES',
-        payload:json.data
-    })
-} catch (error) {
-    console.log(error);
+            return dispatch({
+                type: 'GET_NAME_COUNTRIES',
+                payload:json.data
+            })
+        } catch (error) {
+        alert('País no encontrado!')
+        }
     }
-}
 }
 
 // export function postActivity(payload){

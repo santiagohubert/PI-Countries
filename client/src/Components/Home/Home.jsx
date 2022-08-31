@@ -7,6 +7,7 @@ import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado";
 //  import Cards from "../Cards/Cards";
 import "./home.css";
+import SearchBar from "../SearchBar/SearchBar";
 
 export default function Home() {
   const dispatch = useDispatch(); //es para utilizar esa constante e ir despachando mis acciones (actions)
@@ -102,6 +103,7 @@ export default function Home() {
           <div>
             <Link to="/form" className="add-activity"> Añadir actividad turística </Link>
           </div>
+          <SearchBar setCurrentPage={setCurrentPage}/>
           <Paginado
             setCurrentPage ={setCurrentPage}
             currentPage ={currentPage}
