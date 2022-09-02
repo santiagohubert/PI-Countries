@@ -1,7 +1,9 @@
 .letra-paises{
     color: #d89024;
-    padding: 15px;
+    padding: 13px;
     box-shadow: 0 3px 12px rgba(255, 255, 253, 0.663);
+    font-size: 12px;
+    margin-top: 8px;
 }
 
 .letra-paises h1, .letra-paises h2{

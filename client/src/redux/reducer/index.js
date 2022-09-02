@@ -6,6 +6,7 @@ const initialState = {
     details: []
 }
 
+
 function rootReducer(state= initialState, action) {
     switch (action.type) {
         case "GET_COUNTRIES":
@@ -97,6 +98,16 @@ function rootReducer(state= initialState, action) {
             return {
                 ...state,
                 details:[]
+            }
+        case 'FILTER_BY_ACTIVITIES':
+            const countriesAct = state.allCountries
+            const countriesYactivities = countriesAct.filter((e) => {
+                return e.activities.includes(action.payload);
+              });
+            console.log('felipe', countriesYactivities)
+            return {
+                ...state,
+                countries: countriesYactivities
             }
             
             default: return state;

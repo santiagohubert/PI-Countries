@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCountries, filterCountriesByContinent, orderByName, filterByPopulation } from "../../redux/actions/index";
+import { getCountries, filterCountriesByContinent, orderByName, filterByPopulation, getActivities, filterByActivities } from "../../redux/actions/index";
 import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado";
@@ -12,11 +12,12 @@ import SearchBar from "../SearchBar/SearchBar";
 export default function Home() {
   const dispatch = useDispatch(); //es para utilizar esa constante e ir despachando mis acciones (actions)
   const allCountries = useSelector((state) => state.countries);
-
+  
   const [currentPage, setCurrentPage] = useState(1); //currentPage => pagina actual setCuPage => la fn que actualiza ese primer estado, que generara, un nuevo state.
   const [countriesPerPage, setCountriesPerPage] = useState(10);
   const [orden, setOrden] = useState("");
-
+  const activities = useSelector((state) => state.activities)
+  console.log(activities)
   const indexOfLastCountries = currentPage * countriesPerPage; //para saber el ultimo indice de la receta de la pag. 1 = 9 recetas, 2 pag = 18 recetas.
   const indexOfFirstCountries = indexOfLastCountries - countriesPerPage; //indice de tu primer receta en la 2da pagina, seria 9.
   const currentCountries = allCountries.slice(indexOfFirstCountries,indexOfLastCountries);
@@ -27,6 +28,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getCountries());
+    dispatch(getActivities());
   }, [dispatch]);
 
   console.log(allCountries);
@@ -38,6 +40,12 @@ export default function Home() {
 
     function handleFilterContinent(e) {
         dispatch(filterCountriesByContinent(e.target.value));                                                       //va a tomar como payload el valor de cada uno de los value de las option del select
+        setCurrentPage(1)
+    }
+
+    function handleFilterActivity(e){
+      console.log(e.target.value)
+      dispatch(filterByActivities(e.target.value));
     }
 
     function handleFilterStatus(e) {
@@ -57,6 +65,7 @@ export default function Home() {
         setCurrentPage(1); // cuando hago el ordenamiento lo hago desde la pagina 1, 
         setOrden(`Ordenado ${e.target.value}`) // setOrden es un estado local que en un inicio va a estar vacio, para cuando seteo en la pagina 1, me modifica el estado local y renderiza
     };
+    let a = []
 
   return (
     <div className="home-contain">
@@ -93,10 +102,19 @@ export default function Home() {
             <option value="Europe">Europa</option>
             <option value="Oceania">Oceania</option>
           </select>
-          <select
-            className="form-select" name="existing" defaultValue="existing"
+          <select onChange={e => handleFilterActivity(e)}
+            className="form-select" name="existing" defaultValue="filtro-actividad"
           >
-            <option value="">Filtrar por actividad</option>
+            <option value="filtro-actividad" hidden>Filtrar por actividad</option>
+            {
+              activities && activities.map((e,i) => {
+                console.log(a)
+                if (!a.includes(e.name)) {                  
+                  a.push(e.name)
+                  return <option value={e.name} key={i}>{e.name}</option>
+                }
+              })
+            }
           </select>
           <button onClick={(e)=> {handleClick(e)}} className="clean-filters"> Limpiar filtros </button>
           </div>
@@ -122,6 +140,7 @@ export default function Home() {
                 name={e.name}
                 continents={e.continents}
                 image={e.flag}
+
               />
             </div>
           );

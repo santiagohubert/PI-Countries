@@ -16,7 +16,7 @@ require("dotenv").config();
                 capital: e.capital? e.capital[0]: 'No se encontró la capital del pais',
                 subregion: e.subregion? e.subregion : "No existe",
                 area: e.area,
-                population: e.population
+                population: e.population,
             }
         });
         apiInfoJs.forEach(e => {
@@ -29,7 +29,7 @@ require("dotenv").config();
                     capital: e.capital,
                     subregion: e.subregion,
                     area: e.area,
-                    population: e.population
+                    population: e.population,
                 },
             })
         });
@@ -44,7 +44,28 @@ require("dotenv").config();
 
 const getCountryName = async (req,res) => {
     const { name } =req.query
-    const allCountries = await getApiCountry();
+    const countries = await Country.findAll({
+        include: [
+            {
+                model: Activity,
+                attributes: ['name'],
+                through: { attributes: [] },
+            }
+        ],
+    });
+    const allCountries = countries.map(e => {
+        return {
+            id: e.id,
+            name: e.name,
+            flag: e.flag,
+            continents: e.continents,
+            capital: e.capital,
+            subregion: e.subregion,
+            area: e.area,
+            population: e.population,
+            activities: e.activities.map(e => e.name)
+        }
+    })
     if(name) {
         let countryName = allCountries.filter(e => e.name.toLowerCase().includes(name.toLowerCase())
     );
@@ -74,5 +95,6 @@ const getCountryId = async (req, res) => {
         }
      } 
 }
+
 
 module.exports = { getApiCountry, getCountryName, getCountryId }

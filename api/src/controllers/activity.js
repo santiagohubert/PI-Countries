@@ -27,4 +27,21 @@ const postActivities = async (req, res) => {
     } 
 }
 
-module.exports = { postActivities }
+const getActivities = async (req, res) => {
+    try {
+        const activities = await Activity.findAll({
+            include: [
+                {
+                    model: Country,
+                    attributes: ['name'],
+                    through: { attributes: [] },
+                }
+            ],
+        })
+        res.status(200).send(activities)
+    } catch (error) {
+        res.status(400).send('no funca')
+    }
+}
+
+module.exports = { postActivities, getActivities }

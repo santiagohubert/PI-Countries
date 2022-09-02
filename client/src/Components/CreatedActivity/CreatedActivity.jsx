@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function validate(input) {
   let errors = {};
-  if(!input.name || input.name.length < 3 || !input.name.match( (/^[A-Za-z]+$/))) {
+if(!input.name || input.name.length < 3) {
       errors.name =  'Se requiere que ingrese un nombre para la actividad';
   } else if (!input.difficulty) {
       errors.difficulty = 'Se requiere que ingrese una dificultad para la actividad';
@@ -57,15 +57,23 @@ function handleDelete(e) {
     console.log(input);
 }
 
-function handleSelect(e) {                     // cuando mando el country, traigo lo que ya habia en el estado y le concateno el target value
+function handleSelect(e) {    
+  if(!input.countries.includes(e.target.value)){                           // cuando mando el country, traigo lo que ya habia en el estado y le concateno el target value
   setInput({
       ...input,
       countries: [...input.countries,e.target.value]
   })
 }
+}
 
-function handleSubmit(e) {                
+function handleSubmit(e) {      
+  console.log(errors)          
   e.preventDefault();
+  setErrors(validate(input))
+  const errorCompletarFormu = validate(input)
+  if(Object.values(errorCompletarFormu).length !== 0 || !input.countries){
+    alert ("Todos los campos deben ser requeridos")
+  } else {
   dispatch(postActivity(input));
   alert('Actividad creada con éxito');
   setInput({
@@ -76,6 +84,7 @@ function handleSubmit(e) {
   countries: []
   })
   history.push('/home');
+}
 }
 //useHistory método del router, lo que hace es redirigirme a la ruta que yo le diga
 

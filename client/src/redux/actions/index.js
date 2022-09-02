@@ -94,3 +94,10 @@ export function cleanDetails(){
     }
 }
 
+export function filterByActivities(payload){
+        return{
+            type: 'FILTER_BY_ACTIVITIES',
+            payload
+        }
+}
+
