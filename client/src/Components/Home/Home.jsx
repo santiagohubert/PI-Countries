@@ -8,6 +8,7 @@ import Paginado from "../Paginado/Paginado";
 //  import Cards from "../Cards/Cards";
 import "./home.css";
 import SearchBar from "../SearchBar/SearchBar";
+import Footer from "../Footer/Footer";
 
 export default function Home() {
   const dispatch = useDispatch(); //es para utilizar esa constante e ir despachando mis acciones (actions)
@@ -68,6 +69,7 @@ export default function Home() {
     let a = []
 
   return (
+    <>
     <div className="home-contain">
       <div>
         <div className="centradoPage">
@@ -148,5 +150,9 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <div>
+    <Footer />
+  </div>
+  </>
   );
 }

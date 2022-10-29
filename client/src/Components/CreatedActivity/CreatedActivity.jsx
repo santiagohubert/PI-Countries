@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { getCountries, getActivities, postActivity } from '../../redux/actions';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Footer from '../Footer/Footer';
 
 function validate(input) {
   let errors = {};
@@ -89,6 +90,7 @@ function handleSubmit(e) {
 //useHistory método del router, lo que hace es redirigirme a la ruta que yo le diga
 
   return (
+    <>
     <div className='form-contain'>
       <div className='btn-volver'><Link to='/home'>  <button> Volver </button></Link></div>
 
@@ -181,5 +183,9 @@ function handleSubmit(e) {
           <button className="botonX" onClick = {() => handleDelete(e)}>X</button> 
       </div>)}
     </div>
+    <div>
+    <Footer />
+  </div>
+</>
   )}
   

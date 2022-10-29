@@ -5,8 +5,10 @@ require("dotenv").config();
  const getApiCountry = async(req, res) => {
     try{
         const infoDB = await Country.findAll()
+        // console.log(await Country.findAll(), "soy feli")
         if(!infoDB.length){
-        const apiUrl = await axios.get(`https://restcountries.com/v3/all`)
+        const apiUrl = await axios.get('https://restcountries.com/v3/all')
+        console.log(apiUrl,"soy tito")
         const apiInfoJs = await apiUrl.data.map((e) => {
             return {
                 id: e.cca3,
