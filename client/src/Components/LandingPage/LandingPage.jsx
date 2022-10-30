@@ -77,10 +77,35 @@ export default function LandingPage() {
                         alt="img"
                         className="Logosm"
                     />
+                    <img
+                        src="https://comingsoon.ae/wp-content/uploads/2018/01/20228889_10154852842886818_3414718733247474557_n.jpg"
+                        width="120px"
+                        alt="img"
+                        className="Logosm"
+                    />
+                    <img
+                        src="https://cdn.iconscout.com/icon/free/png-256/mastercard-10-226450.png"
+                        width="120px"
+                        alt="img"
+                        className="Logosm"
+                    />
 
 
                     
                 </div>
+            </div>
+            <div className="contain-formatos">
+                <div className="formatos-viajes">
+                    <h1 className="title-dinamica"> Te ayudamos a planear tu viaje </h1>
+                        <h2> ¿Sabías que podes hacerlo pensando en lugares o en experiencias? </h2>
+                        <h3> Esto nos abre muchas más posibilidades: </h3>
+                            Por interés geográfico o por actividad turística.
+                           <p> ¿En qué consiste? </p>
+                            <p>Interés geográfico es cuando tenes ganas de visitar tal país, por su paisaje, cultura, etc. </p>
+                            Planearlo desde una actividad turística es cuando tenes ganas de vivir determinadas experiencias, entonces te ayudamos a que sepas que países pueden ofrecerte esa posibilidad.          
+
+                </div>
+                {/* //Para que viajar nunca deje de ser novedoso, podes planificar tu viaje de dos formas: por interés  */}
             </div>
             <div>
                 <Footer />

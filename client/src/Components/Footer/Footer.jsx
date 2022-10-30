@@ -9,17 +9,23 @@ export default function Footer() {
             <div className="contain-footer">
                 <div>
                 <div>
-                    <h5> ¡A volar! </h5>
+                    <h2> ¡A volar! </h2>
                         <p> Explora el mundo desde tu casa. </p>
                 </div>
                 </div>
                 <div>
-                    <h5> Links
-                    </h5>
+                    <h2> Links
+                    </h2>
                         <p> Política y privacidad </p>
                         <p> Avisos legales </p>
                         <p> Terminos y condiciones </p>
                         <p> Sobre nosotros </p>
+                </div>
+                <div>
+                    <h2> Contacto </h2>
+                    <p> Mail </p>
+                    <p> Redes </p>
+                    <p> Número </p>
                 </div>
             </div>
          </footer>   

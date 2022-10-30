@@ -1,10 +1,15 @@
 .bg-footer{
-    color: blue;
-    padding-top: 5rem;
+    color: #054864
 
 }
 
 .contain-footer{
     margin-top: 1px;
     opacity: 1;
+    border-top: 5px solid cornflowerblue;
+    background-color: gainsboro;
 }
+/* display: inline-block;
+box-sizing: border-box;
+text-align: center;
+position: relative; */
