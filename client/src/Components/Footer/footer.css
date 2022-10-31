@@ -1,5 +1,5 @@
 .bg-footer{
-    color: #054864
+    color:white
 
 }
 
@@ -7,9 +7,38 @@
     margin-top: 1px;
     opacity: 1;
     border-top: 5px solid cornflowerblue;
-    background-color: gainsboro;
+    background-color: #054864;
 }
+
+.link-edit{
+text-decoration: none;
+color: white;
+}
+
+.fuente-link{
+    color: white;
+}
+
+.derechos-foot{
+    color: #054864;
+}
+
+.frase-foot{
+    
+}
+
+
 /* display: inline-block;
 box-sizing: border-box;
 text-align: center;
 position: relative; */
+
+/* color:currentColor;
+text-transform:uppercase;
+font-size:.8125em;font-style:normal}
+
+.wp-block-quote{
+    border-left:.25em solid;
+    margin:0 0 1.75em;padding-left:1em}
+    
+    .wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}. */

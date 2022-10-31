@@ -33,7 +33,7 @@ top: 580px;
     border: 1px solid white;
     border-radius: 15px;
     box-shadow: 6px 7px 8px -6px rgba(69, 69, 69, 0.7);
-    background-color: rgba(255, 255, 255, 0.663);
+    background-color: #0547649a;
 }
 
 .country-added{
@@ -113,7 +113,7 @@ right: -140px;
 }
 
 .submit-button {
-    background-color: rgb(3, 82, 20);
+    background-color: #f83200ef;
     color: white;
     box-shadow: 0 3px 12px rgba(255, 255, 255, 0.663);
     padding: 15px;
