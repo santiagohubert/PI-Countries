@@ -58,12 +58,14 @@ function handleDelete(e) {
     console.log(input);
 }
 
+useEffect(() => console.log(), []);
+
 function handleSelect(e) {    
-  if(!input.countries.includes(e.target.value)){                           // cuando mando el country, traigo lo que ya habia en el estado y le concateno el target value
+  if(!input.countries.includes(e.target.value)){                                                                     // cuando mando el country, traigo lo que ya habia en el estado y le concateno el target value
   setInput({
-      ...input,
+      ...input, 
       countries: [...input.countries,e.target.value]
-  })
+  }) 
 }
 }
 
