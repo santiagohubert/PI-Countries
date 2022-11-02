@@ -1,6 +1,5 @@
 .landing-contain {
     background-image: url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/01/17155044/Avion-despegando.jpg');
-    background-repeat: no-repeat; 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
@@ -22,7 +21,7 @@
 }  
 
 .subtitulo-landing{
-    font-size: 11px; /*tamaño*/
+    font-size: 13px; /*tamaño*/
     font-family:initial;
     display: flex;
     justify-content: center;
@@ -45,6 +44,7 @@
 } */
 
 .btn1{
+    font-family: math;
     position: relative;
     border-radius: 10px;
     padding: 15px 25px;
@@ -57,7 +57,7 @@
     background-size: 200%;
     background-position: right;
     transition: background-position 0.5s;
-    top: 290px;
+    top: 380px;
     left: 2px;
     text-decoration: none;
 }

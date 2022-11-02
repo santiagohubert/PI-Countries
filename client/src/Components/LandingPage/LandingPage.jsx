@@ -16,7 +16,7 @@ export default function LandingPage() {
                 <Fragment>
             <Link to = '/home'>
                 {/* <div className="containerbtn"> */}
-                <button className="btn1" type="button"> COMENZAR </button>
+                <button className="btn1" type="button"> ¡A VOLAR! </button>
                 {/* </div> */}
             </Link>
             </Fragment>
