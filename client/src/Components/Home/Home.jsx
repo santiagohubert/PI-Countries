@@ -9,6 +9,8 @@ import Paginado from "../Paginado/Paginado";
 import "./home.css";
 import SearchBar from "../SearchBar/SearchBar";
 import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
   const dispatch = useDispatch(); //es para utilizar esa constante e ir despachando mis acciones (actions)
@@ -71,6 +73,7 @@ export default function Home() {
   return (
     <>
     <div className="home-contain">
+    <NavBar />
       <div>
         <div className="centradoPage">
             <div>
