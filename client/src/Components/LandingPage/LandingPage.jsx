@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
+import CardLanding from "./CardLanding/CardLanding";
 import "./landingPage.css";
 
 export default function LandingPage() {
@@ -99,9 +100,10 @@ export default function LandingPage() {
             <div className="contain-formatos">
                 <div className="formatos-viajes">
                     <h1 className="title-dinamica"> Te ayudamos a planear tu viaje </h1>
-                        <h2> ¿Sabías que podes hacerlo pensando en lugares o en experiencias? </h2>
+                        <h2> ¿Sabías que podes hacerlo desde tres intereses? </h2>
+                        <CardLanding />
                         <h3> Esto nos abre muchas más posibilidades: </h3>
-                            Por interés geográfico o por actividad turística.
+                            Por interés geográfico o por actividad turística.                   
                            <p> ¿En qué consiste? </p>
                             <p>Interés geográfico es cuando tenes ganas de visitar tal país, por su paisaje, cultura, etc. </p>
                             Planearlo desde una actividad turística es cuando tenes ganas de vivir determinadas experiencias, entonces te ayudamos a que sepas que países pueden ofrecerte esa posibilidad.          
