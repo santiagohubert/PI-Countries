@@ -10,23 +10,25 @@
 }
 
  .titulo-landing{
-    font-size: 20px; /*tamaño*/
-    font-family:initial;
+    font-size: 37px; /*tamaño*/
+    font-family: 'Rubik Dirt', cursive;
     display: flex;
+    box-shadow: 0 3px 12px rgb(255 255 255 / 66%);
     justify-content: center;
     position: relative;
-    top: 80px;
+    top: 52px;
     left: 0px;
     color:blanchedalmond;
 }  
 
 .subtitulo-landing{
-    font-size: 13px; /*tamaño*/
-    font-family:initial;
+    font-size: 40px; /*tamaño*/
+    font-family: 'Rubik Dirt', cursive;
     display: flex;
     justify-content: center;
     position: relative;
-    top: 405px;
+    box-shadow: 0 3px 12px rgb(255 255 255 / 66%);
+    top: 399px;
     left: 0px;
     color:blanchedalmond;
 }
@@ -57,7 +59,7 @@
     background-size: 200%;
     background-position: right;
     transition: background-position 0.5s;
-    top: 380px;
+    top: 389px;
     left: 2px;
     text-decoration: none;
 }

@@ -11,7 +11,7 @@ export default function NavBar(){
   <div class="container-fluid">
     <a href="#" className="nav__brand">
       <Link to={"/home"}>
-      <img className="LogoAVolar" src="https://res.cloudinary.com/dapicfoap/image/upload/v1668453030/Extras/LOGOAVOLAR_e1xsp4.png"/>
+      <img className="LogoAVolar" src="https://res.cloudinary.com/dapicfoap/image/upload/v1669141516/Extras/image-removebg-preview_2_t4t7xi.png"/>
       </Link> 
       </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

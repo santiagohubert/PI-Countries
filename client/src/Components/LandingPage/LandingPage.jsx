@@ -10,11 +10,15 @@ export default function LandingPage() {
         <Fragment>
             <NavBar />
             <div className="landing-contain">
-                <div className="titulo-landing">
-            <h1> ¿ESTÁS LISTO PARA VOLAR? </h1>
+                <div>
+                    <div className="titulo-landing">
+            <> ¿BUSCAS OTRA EXPERIENCIA? </>
                 </div>
-                <div className="subtitulo-landing">
-                <h2> ¡Prepará tu valija y vamos! </h2>
+                </div>
+                <div>
+                    <div className="subtitulo-landing">
+                        <> ¡Prepará tu valija y vamos! </>
+                    </div>
                 </div>
                 <Fragment>
             <Link to = '/home'>

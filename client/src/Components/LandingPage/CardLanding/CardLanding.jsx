@@ -9,7 +9,7 @@ export default function CardLanding({}){
         <span>Geográfico</span>
     </div>
     <div class="card">
-        <span>Cultural</span>
+        <span>Cultural y experiencial</span>
     </div>
     <div class="card">
         <span>Por descuentos</span>
